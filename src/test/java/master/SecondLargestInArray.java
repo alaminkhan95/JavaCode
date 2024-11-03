@@ -12,24 +12,35 @@ public class SecondLargestInArray {
 
     public static void secondLargestInArray() {
 
-        int[] array = {1, 2, 3, 4, 5, 6, 7};
-        int temp;
+        int[] arr ={11,22,33,1,2,3,4,5,6,67};
 
-        // Sort the array in descending order
-        for (int i = 0; i < array.length; i++) {
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[i] < array[j]) { // Sort in descending order
-                    temp = array[i];
-                    array[i] = array[j];
-                    array[j] = temp;
+        int temp ;
+
+        for (int i =0;i<arr.length;i++){
+
+            for (int j =i+1;j<arr.length;j++){
+
+                if (arr[i]<arr[j]){
+                    temp=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=temp;
+
                 }
             }
         }
 
-        // Find the second unique largest element
-        for (int i = 1; i < array.length; i++) {
-            if (array[i] != array[0]) { // array[0] is the largest element
-                System.out.println("The second largest element is: " + array[i]);
+        //67,33
+        int count = 1;
+        for (int i =1;i<arr.length;i++){
+
+            if (arr[i]!=arr[i-1]){
+
+                count++;
+            }
+
+            if (count==2){
+
+                System.out.println(arr[i]);
                 break;
             }
         }
