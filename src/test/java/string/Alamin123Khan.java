@@ -4,25 +4,35 @@ public class Alamin123Khan {
 
     public static void main(String[] args) {
 
-        String string = "Alamin123Khan";
+        // Initialize a string with both alphabetic and numeric characters
+        String inputString = "Alamin123Khan";
 
-        StringBuilder alphaPart = new StringBuilder();
+// StringBuilder for storing alphabetic characters
+        StringBuilder alphabeticPart = new StringBuilder();
+
+// StringBuilder for storing numeric characters
         StringBuilder numericPart = new StringBuilder();
 
-       for (char c :string.toCharArray()){
+// Iterate through each character in the input string
+        for (char currentChar : inputString.toCharArray()) {
 
-           if (Character.isLetter(c)){
+            // Check if the character is a letter
+            if (Character.isLetter(currentChar)) {
 
-               numericPart.append(c);
-           }else {
+                // Append alphabetic character to alphabeticPart StringBuilder
+                alphabeticPart.append(currentChar);
 
-               alphaPart.append(c);
-           }
-       }
+            } else {
 
+                // Append numeric character to numericPart StringBuilder
+                numericPart.append(currentChar);
+            }
+        }
 
-        System.out.println(alphaPart);
-        System.out.println(numericPart);
+// Print the results
+        System.out.println("Alphabetic characters: " + alphabeticPart);
+        System.out.println("Numeric characters: " + numericPart);
+
 
     }
 }

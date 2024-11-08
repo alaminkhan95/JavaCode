@@ -4,17 +4,20 @@ public class EvenandOddIndex {
 
     public static void main(String[] args) {
 
-        String string = "Automation";
+        // Initialize a string to print characters at even indices
+        String inputString = "Automation";
 
+// Iterate through each character in the string by index
+        for (int index = 0; index < inputString.length(); index++) {
 
+            // Check if the index is even
+            if (index % 2 == 0) {
 
-        for (int i =0;i<string.length();i++){
-
-            if (i%2==0){
-
-                System.out.print(string.charAt(i)+" ");
+                // Print the character at the even index, followed by a space
+                System.out.print(inputString.charAt(index) + " ");
             }
         }
+
 
     }
 }

@@ -4,28 +4,39 @@ public class aBACbcEDed {
 
     public static void main(String[] args) {
 
-        String string = "AaBCbcEDed";
+        // Initialize a mixed-case string
+        String inputString = "AaBCbcEDed";
 
-        StringBuilder uppercase = new StringBuilder();
-        StringBuilder lowercase = new StringBuilder();
+// StringBuilder for storing uppercase letters
+        StringBuilder uppercaseLetters = new StringBuilder();
 
-        for (char c :string.toCharArray()){
+// StringBuilder for storing lowercase letters
+        StringBuilder lowercaseLetters = new StringBuilder();
 
-            if (Character.isLowerCase(c)){
+// Iterate through each character in the input string
+        for (char currentChar : inputString.toCharArray()) {
 
-                lowercase.append(c);
-            }else {
+            // Check if the character is lowercase
+            if (Character.isLowerCase(currentChar)) {
 
-                uppercase.append(c);
+                // Append lowercase character to lowercase StringBuilder
+                lowercaseLetters.append(currentChar);
+
+            } else {
+
+                // Append uppercase character to uppercase StringBuilder
+                uppercaseLetters.append(currentChar);
             }
-
         }
 
-        System.out.println(uppercase);
-        System.out.println(lowercase);
+// Print the results
+        System.out.println("Uppercase letters: " + uppercaseLetters);
+        System.out.println("Lowercase letters: " + lowercaseLetters);
 
-//        Output in lowercase: abced
-//        Output in uppercase: ABCED
+
+//        Uppercase letters: ABCED
+//        Lowercase letters: abcbed
+
 
 
     }

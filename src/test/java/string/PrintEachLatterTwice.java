@@ -2,17 +2,31 @@ package string;
 
 public class PrintEachLatterTwice {
 
+    /**
+     *
+     * Java program to print each letter twice
+     * from a given string
+     *
+     */
+
     public static void main(String[] args) {
 
-        String string = "Hello";
+        // Initialize the input string
+        String inputString = "Hello";
 
-        StringBuilder stringBuilder = new StringBuilder();
+// Create a StringBuilder to build the result
+        StringBuilder resultStringBuilder = new StringBuilder();
 
-        for (char c : string.toCharArray()){
+// Iterate through each character in the input string
+        for (char currentChar : inputString.toCharArray()) {
 
-            stringBuilder.append(c).append(c);
+            // Append the character twice to the StringBuilder
+            resultStringBuilder.append(currentChar).append(currentChar);
         }
 
-        System.out.println(stringBuilder);
+// Print the final result
+        System.out.println(resultStringBuilder);
+
+//HHeelllloo
     }
 }
