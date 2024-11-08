@@ -1,39 +1,39 @@
 package master;
 
+
 public class Testclass {
 
     public static void main(String[] args) {
 
-        int[] array = {100,200,300,400};
-        int temp;
 
-        for (int i =0;i<array.length;i++){
+        String str = "aabbcccdd";
 
-            for (int j =i+1;j<array.length;j++){
-
-                if (array[i]<array[j]){
-
-                    temp=array[i];
-                    array[i]=array[j];
-                    array[j]=temp;
-                }
-
-            }
-        }
+        StringBuilder stringBuilder = new StringBuilder();
 
         int count =1;
-        for (int i =1;i<array.length;i++){
 
-            if (array[i]!=array[0]){
+        for (int i =0;i<str.length();i++){
 
-               count++;
+            if (i+1<str.length()&&str.charAt(i)==str.charAt(i+1)){
+
+                count++;
+            }else {
+
+                stringBuilder.append(str.charAt(i)).append(count);
+                count=1;
             }
 
-            if (count==4){
-                System.out.println(array[i]);
-                break;
-            }
         }
+        System.out.println(stringBuilder);
+
+
+
 
     }
+
+
 }
+
+
+
+
