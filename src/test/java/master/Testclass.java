@@ -1,27 +1,14 @@
 package master;
 
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Testclass {
 
     public static void main(String[] args) {
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
+}
 
 
 }
