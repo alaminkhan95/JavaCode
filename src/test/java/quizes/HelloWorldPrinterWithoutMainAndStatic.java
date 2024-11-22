@@ -1,6 +1,6 @@
 package quizes;
 
-public class HelloWorldPrinter {
+public class HelloWorldPrinterWithoutMainAndStatic {
 
    public static int printString(){
 
