@@ -10,29 +10,26 @@ public class BubbleSort {
      */
 
     public static void main(String[] args) {
-        int[] numbers = {5, 2, 8, 7, 1}; // Array to be sorted
 
-        // Outer loop - Controls the number of passes through the array
-        for (int pass = 0; pass < numbers.length - 1; pass++) {
+        int[] array = {3, 7, 1, 4, 9, 2, 5};
 
-            // Inner loop - Moves the largest unsorted element to its correct position
-            for (int index = 0; index < numbers.length - 1 - pass; index++) {
+        for (int i =0;i<array.length;i++){
 
-                // Check if the current element is greater than the next element
-                if (numbers[index] > numbers[index + 1]) {
+            for (int j =i+1;j<array.length;j++){
 
-                    // Swap the elements if they are in the wrong order
-                    int temp = numbers[index];
-                    numbers[index] = numbers[index + 1];
-                    numbers[index + 1] = temp;
+                if (array[i]>array[j]){
+
+                    int temp = array[i];
+                    array[i]=array[j];
+                    array[j]=temp;
                 }
             }
+
         }
 
-        // Print the sorted array
-        System.out.print("Sorted Array: ");
-        for (int number : numbers) {
-            System.out.print(number + " ");
+        for (int number : array){
+
+            System.out.print(number+" ");
         }
     }
 }

@@ -2,6 +2,12 @@ package quizes;
 
 public class OverloadExample {
 
+    /**
+     * Prioprity will be given to
+     * 1.int 2. long , 3,Integer , 4. int ...
+     *
+     */
+
     public void display(byte value) {
         System.out.println("byte value: " + value);
     }
@@ -12,6 +18,9 @@ public class OverloadExample {
 
     public void display(int value) {
         System.out.println("int value: " + value);
+    }
+    public void display(int... value) {
+        System.out.println("int..... value: ");
     }
 
     public void display(long value) {
