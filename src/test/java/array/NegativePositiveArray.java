@@ -3,7 +3,7 @@ package array;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NegetivePositiveArray {
+public class NegativePositiveArray {
 
     public static void main(String[] args) {
 
