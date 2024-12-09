@@ -2,35 +2,55 @@ package string;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.Stack;
 
 public class TestString {
 
     public static void main(String[] args) {
 
 
-        int[] numArr = {13, 43, 2, 71};
 
-        int num = 84;
+        String string = "[{()}]";
 
-        int[] numbers = new int[2];
+        boolean flag = true;
 
-        for (int i =0;i<numArr.length;i++){
+        Stack<Character> stack = new Stack<>();
 
-            for (int j =i+1;j<numArr.length;j++){
+        for (char c : string.toCharArray()){
 
-                if (numArr[i]+numArr[j]==num){
+            if (c== '{' || c == '(' || c == '['){
 
-                   numbers[0]=numArr[i];
-                   numbers[1]= numArr[j];
+                stack.push(c);
+            }else {
 
+                if (stack.isEmpty()){
+
+                    flag=false;
                 }
+
+                char lastCharacter = stack.pop();
+
+                if(lastCharacter=='{'&& c != '}'){
+
+                    flag =false;
+                } else if (lastCharacter=='(' && c != ')') {
+                    flag =false;
+                } else if (lastCharacter=='[' && c != ']') {
+                    flag=false;
+                }
+
             }
+
         }
 
-        for (int number : numbers){
+        if (flag && stack.isEmpty()){
 
-            System.out.println(number);
+            System.out.println("Balanced String");
+        }else {
+
+            System.out.println("Imbalanced string");
         }
+
 
 
 
